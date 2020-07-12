@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.covid19">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon_covid"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon_covid"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".DistrictDetailsActivity"
+            android:parentActivityName=".AffectedDistrict"></activity>
+        <activity android:name=".AffectedDistrict"
+            android:parentActivityName=".AffectedIndia"/>
+        <activity android:name=".AffectedIndia"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DetailsActivity"
+            android:parentActivityName=".AffectedCountries" />
+        <activity
+            android:name=".AffectedCountries"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7794711814086493~8858951195"/>
+    </application>
+
+</manifest>
